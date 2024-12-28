@@ -1,0 +1,82 @@
+/* Reset default styles */
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+
+/* Body styles */
+body {
+    font-family: 'Arial', sans-serif;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    height: 100vh;
+    background-color: #f0f0f0;
+}
+
+/* Calculator container */
+.calculator {
+    width: 320px;  /* Slightly wider to accommodate the buttons evenly */
+    padding: 20px;
+    border-radius: 10px;
+    background-color: #333;
+    box-shadow: 0 0 10px rgba(0, 0, 0, 0.2);
+}
+
+/* Display section */
+.display {
+    background-color: #222;
+    color: white;
+    padding: 10px;
+    margin-bottom: 20px;
+    border-radius: 5px;
+    text-align: right;
+}
+
+.display p {
+    font-size: 24px;
+    margin: 0;
+}
+
+.hit {
+    color: #8a8a8a;
+}
+
+.ans {
+    font-size: 32px;
+    font-weight: bold;
+}
+
+/* Button grid */
+.buttons {
+    display: grid;
+    grid-template-columns: repeat(4, 1fr);
+    gap: 10px;
+}
+
+/* Button styles */
+button {
+    padding: 20px;
+    font-size: 18px;
+    background-color: #444;
+    color: white;
+    border: none;
+    border-radius: 5px;
+    cursor: pointer;
+    transition: background-color 0.2s ease;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    text-align: center;
+    width: 100%;  /* Ensures buttons take equal width */
+}
+
+button:hover {
+    background-color: #555;
+}
+
+/* Additional styling for the last row */
+button:last-child {
+    grid-column: span 2;
+}
